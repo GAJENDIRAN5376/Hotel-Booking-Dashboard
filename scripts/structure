@@ -1,0 +1,16 @@
+Hotel-Booking-Dashboard/
+│
+├── data/
+│ └── schema.sql -- All table creation scripts
+│ └── sample_data.sql -- Insert sample data (rooms, customers, etc.)
+│
+├── scripts/
+│ └── procedures_triggers.sql -- Triggers and stored procedures
+## ⚙️ Automation Used
+
+- `AFTER INSERT` trigger to update room availability to **Booked**
+- `AFTER DELETE` trigger to update room availability to **Available**
+- Stored procedure `MakeBooking()` that:
+  - Prevents double booking
+  - Calculates total price based on dates
+  - Inserts booking record
