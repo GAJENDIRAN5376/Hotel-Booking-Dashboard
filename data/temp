@@ -1,0 +1,33 @@
+Hotel-Booking-Dashboard/
+│
+├── data/
+│ └── schema.sql -- All table creation scripts
+│ └── sample_data.sql -- Insert sample data (rooms, customers, etc.)
+## 🧱 Database Structure
+
+### 🛏️ Rooms Table
+- RoomNo (Primary Key)
+- RoomType
+- PricePerday
+- Availability (`Available`, `Booked`)
+
+### 👤 Customers Table
+- CustomerID (Auto Increment, Primary Key)
+- Name
+- Contact
+- Email
+
+### 📅 Bookings Table
+- BookingID (Auto Increment, Primary Key)
+- CustomerID (FK)
+- RoomNo (FK)
+- CheckInDate / CheckOutDate
+- TotalAmount
+- PaymentStatus (`Paid`, `Pending`)
+
+### 💳 Payments Table
+- PaymentID (Auto Increment, Primary Key)
+- BookingID (FK)
+- AmountPaid
+- PaymentMethod
+- PaymentDate
